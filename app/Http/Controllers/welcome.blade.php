@@ -83,10 +83,10 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{url('/angkatan')}}"> Angkatan</a>
-                    <a href="{{url('/view')}}">View Database Buku</a>
-                    <a href="{{url('/view')}}">JSON</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+
+                    <a href="{{url('/api/library')}}">View Database Buku</a>
+
+                    <a href="https://github.com/dedyyyy/library-laravel">GitHub</a>
                 </div>
             </div>
         </div>
