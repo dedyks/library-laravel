@@ -16,18 +16,19 @@ class CreateLibraryTable extends Migration
         Schema::create(/**
          * @param Blueprint $table
          */
-            'library', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            'libraries', function (Blueprint $table) {
+              $table->primary(['ISBN']);
+            $table->char('ISBN');
             $table->string('title', 99);
+            $table->string('subtitle', 99);
             $table->string('author', 99);
-            $table->string('weight', 99);
-            $table->string('publisher', 99);
-            $table->string('language', 99);
-            $table->string('pages', 99);
             $table->datetime('publicationDate');
-            $table->datetime('created_on');
-            $table->datetime('updated_on');
+            $table->string('publisher', 99);
+            $table->integer('pages');
+            $table->string('description', 4000);
+            $table->string('website', 99);
+
+
         });
     }
 
@@ -38,6 +39,6 @@ class CreateLibraryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('library');
+        Schema::dropIfExists('libraries');
     }
 }
